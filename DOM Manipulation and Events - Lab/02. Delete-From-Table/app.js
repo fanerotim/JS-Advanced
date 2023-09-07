@@ -8,11 +8,14 @@ function deleteByEmail() {
     let isFound = false;
     
     for (let curRow of rowElements) {
-        let curRowChildren = Array.from(curRow.children);
-
+        let curRowChildren = Array.from(curRow.children);  
+           
         for (let curChild of curRowChildren) {
             if (curChild.textContent === input) {
-                curRow.parentNode.removeChild(curRow); 
+                //old way
+                // curRow.parentNode.removeChild(curRow); 
+                //new approach
+                curChild.parentNode.remove();
                 resultDiv.textContent = 'Deleted'; 
                 isFound = true;
             } 
