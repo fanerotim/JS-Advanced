@@ -12,12 +12,8 @@ function solve(area, vol, input) {
     input = JSON.parse(input);
 
     for (let obj of input) {
-        let x = Number(obj.x);
-        let y = Number(obj.y);
-        let z = Number(obj.z);
-
-        let resultArea = area.call(obj, x, y);
-        let resultVol = vol.call(obj, x, y, z);
+        let resultArea = area.call(obj);
+        let resultVol = vol.call(obj);
 
         output.push({ 'area': resultArea, 'volume': resultVol });
     }
