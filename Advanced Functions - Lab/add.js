@@ -1,8 +1,7 @@
 function add(x) {
-    let startingNum = x;
 
     return function(y) {
-        return startingNum + y;
+        return x + y;
     }
 }
 
