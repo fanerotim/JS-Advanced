@@ -23,43 +23,7 @@ describe('check for symmetry', () => {
 
     it('checks if the array is symmetrical', () => {
 
-        let testArr = ['a', 'b', 'a'];
-        let expectedResult = true;
-        let actualResult = isSymmetric(testArr);
-
-        expect(actualResult).to.equal(expectedResult);
-    });
-
-    it('checks if the array is symmetrical', () => {
-
-        let testArr = ['b', 'b', 'a'];
-        let expectedResult = false;
-        let actualResult = isSymmetric(testArr);
-
-        expect(actualResult).to.equal(expectedResult);
-    });
-
-    it('checks if the array is symmetrical', () => {
-
-        let testArr = {};
-        let expectedResult = false;
-        let actualResult = isSymmetric(testArr);
-
-        expect(actualResult).to.equal(expectedResult);
-    });
-
-    it('checks if the array is symmetrical', () => {
-
         let testArr = 1;
-        let expectedResult = false;
-        let actualResult = isSymmetric(testArr);
-
-        expect(actualResult).to.equal(expectedResult);
-    });
-
-    it('checks if the array is symmetrical', () => {
-
-        let testArr = 'string';
         let expectedResult = false;
         let actualResult = isSymmetric(testArr);
 
@@ -70,6 +34,24 @@ describe('check for symmetry', () => {
 
         let testArr = [];
         let expectedResult = true;
+        let actualResult = isSymmetric(testArr);
+
+        expect(actualResult).to.equal(expectedResult);
+    });
+
+    it('checks if the array is symmetrical', () => {
+
+        let testArr = [0];
+        let expectedResult = true;
+        let actualResult = isSymmetric(testArr);
+
+        expect(actualResult).to.equal(expectedResult);
+    });
+
+    it('checks if the array is symmetrical', () => {
+
+        let testArr = [1, 2, '1'];
+        let expectedResult = false;
         let actualResult = isSymmetric(testArr);
 
         expect(actualResult).to.equal(expectedResult);
