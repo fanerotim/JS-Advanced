@@ -1,5 +1,5 @@
 const createCalculator = require('../addSubtract');
-const solve = require('../createCalculator');
+const solve = require('../addSubtract');
 const expect = require('chai').expect;
 
 describe('create calculator', () => {

@@ -6,7 +6,7 @@ describe('sum of numbers', () => {
 
         let numbers = [1, 3, 5];
         let expectedResult = 9;
-        let actualResult = sum(numbers);
+        let actualResult = solve(numbers);
 
         expect(actualResult).to.equal(expectedResult);
     });
@@ -14,7 +14,7 @@ describe('sum of numbers', () => {
     it('Should return true if all elements of the input array are summed up', () => {
         let numbers = [1, 2, 1];
         let expectedResult = 4;
-        let actualResult = sum(numbers);
+        let actualResult = solve(numbers);
 
         expect(actualResult).to.equal(expectedResult);
     });
@@ -22,7 +22,7 @@ describe('sum of numbers', () => {
     it('Should return true if all elements of the input array are summed up', () => {
         let numbers = [0, 0, 1];
         let expectedResult = 1;
-        let actualResult = sum(numbers);
+        let actualResult = solve(numbers);
 
         expect(actualResult).to.equal(expectedResult);
     });

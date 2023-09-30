@@ -1,5 +1,5 @@
 const rgbToHexColor = require('../rgbToHex');
-const solve = require('../rgbToHexColor');
+const solve = require('../rgbToHex');
 const expect = require('chai').expect;
 
 describe('rgb to hex color', () => {
