@@ -1,5 +1,5 @@
 const isOddOrEven = require('../evenOrOdd');
-const solve = require('../evenOrOdd');
+// const solve = require('../evenOrOdd');
 const expect = require('chai').expect;
 
 describe('even or odd', () => {
