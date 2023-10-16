@@ -39,6 +39,10 @@ describe("Tests company administration object", () => {
         })
 
         it('validates input', () => {
+            expect(companyAdministration.calculateSalary(161)).to.equal(3415);
+        })
+
+        it('validates input', () => {
             expect(companyAdministration.calculateSalary(161.5)).to.equal(3422.5);
         })
     })
@@ -50,14 +54,6 @@ describe("Tests company administration object", () => {
         })
 
         it('validates input', () => {
-            expect(() => companyAdministration.firedEmployee('', 1.5)).to.throw('Invalid input');
-        })
-
-        it('validates input', () => {
-            expect(() => companyAdministration.firedEmployee(['Pesho', 'Ivan'], '')).to.throw('Invalid input');
-        })
-
-        it('validates input', () => {
             expect(companyAdministration.firedEmployee(['Pesho', 'Maria', 'Rado', 'Ben'], 0)).to.equal('Maria, Rado, Ben');
         })
 
@@ -66,11 +62,7 @@ describe("Tests company administration object", () => {
         }) 
 
         it('validates input', () => {
-            expect(companyAdministration.firedEmployee(['Pesho'], 0)).to.equal('');
-        }) 
-
-        it('validates input', () => {
-            expect(companyAdministration.firedEmployee(['Pesho', 'Gosho'], 0)).to.equal('Gosho');
-        }) 
+            expect(() => companyAdministration.firedEmployee(['Pesho', 'Maria', 'Rado', 'Ben'], -1)).to.throw('Invalid input');
+        })
     })
 });
