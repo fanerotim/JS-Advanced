@@ -7,8 +7,11 @@ function personAndTeacher() {
         }
     }
 
-    class Teacher {
-
+    class Teacher extends Person {
+        constructor(name, email, subject) {
+            super(name, email);
+            this.subject = subject;
+        }
     }
 
     return {
@@ -16,3 +19,7 @@ function personAndTeacher() {
         Teacher
     }
 }
+
+let test = new Person('Pesho', 'pesho@abv.bg')
+let secondTest = new Teacher('mathematics')
+console.log(Teacher.name);
