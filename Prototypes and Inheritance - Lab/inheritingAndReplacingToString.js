@@ -9,7 +9,7 @@ function personAndTeacher() {
     }
 
     Person.prototype.toString = function() {
-        return `${this.className} (name: ${this.name}, email: ${this.email})`
+        return `${this.className} (name: ${this.name}, email: ${this.email})`;
     }
 
     class Teacher extends Person {
@@ -20,7 +20,9 @@ function personAndTeacher() {
         }
 
         toString() {
-            Person.toString() + `, subject: ${this.subject})`
+            let input = super.toString();
+            let output = input.substring(0, input.length - 1);
+            return output += `, subject: ${this.subject})`
         }
     }
 
@@ -30,10 +32,10 @@ function personAndTeacher() {
             this.course = course;
             this.className = 'Student';
         }
-
         toString() {
-            Person.toString() + `, course: ${this.course})`;
-            
+            let input = super.toString();
+            let output = input.substring(0, input.length - 1);
+            return output += `, course: ${this.course})`;
         }
     }
 
